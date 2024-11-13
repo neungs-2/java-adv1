@@ -1,4 +1,4 @@
-package thread.test;
+package thread.start.test;
 
 import static java.lang.Thread.sleep;
 import static util.MyLogger.log;

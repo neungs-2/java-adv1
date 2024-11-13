@@ -1,14 +1,15 @@
-package thread.test;
+package thread.start.test;
 
+import static java.lang.Thread.sleep;
 import static util.MyLogger.log;
 
-public class StartTest1Main {
+public class StartTest2Main {
     public static void main(String[] args) {
-        CounterThread counterThread = new CounterThread();
-        counterThread.start();
+        Thread thread = new Thread(new CounterRunnable(), "counter");
+        thread.start();
     }
 
-    static class CounterThread extends Thread {
+    static class CounterRunnable implements Runnable {
         @Override
         public void run() {
             for (int i = 1; i <= 5; i++) {
