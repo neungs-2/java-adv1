@@ -1,4 +1,4 @@
-package thread.control.test;
+package thread.control.join.test;
 
 import static util.MyLogger.log;
 import static util.ThreadUtils.sleep;
