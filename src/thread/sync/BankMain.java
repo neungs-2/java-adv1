@@ -1,11 +1,15 @@
 package thread.sync;
 
+import thread.sync.reentrantlock.BankAccountV4;
+import thread.sync.reentrantlock.BankAccountV5;
+import thread.sync.reentrantlock.BankAccountV6;
+
 import static util.MyLogger.log;
 import static util.ThreadUtils.sleep;
 
 public class BankMain {
     public static void main(String[] args) throws InterruptedException {
-        BankAccount account = new BankAccountV3(1000);
+        BankAccount account = new BankAccountV6(1000);
 
         Thread thread1 = new Thread(new WithdrawTask(account, 800), "t1");
         Thread thread2 = new Thread(new WithdrawTask(account, 800), "t2");
